@@ -21,7 +21,7 @@ $(".portfolio .tab").on('click', function(){
 	$('.tabs-content-wrap .tabs-content').removeClass('active');
 	$('.tabs-content-wrap .tabs-content').eq($(this).index()).addClass('active');
 });
-$('ul.tabs-technology li').addClass('animated bounceInUp');
+// $('ul.tabs-technology li').addClass('animated bounceInUp');
 
 // portfolio block-left
 $(".block-left .block-in-block button.icon").on('click',function(){
@@ -59,7 +59,6 @@ console.log(dotNav);
 // hParallax();
 windowHeight($('header'));
 windowHeight($('.wrap_header'));
-tile();
 
 var headerHeight = $("header").height();
 var dotNav = $("nav ul li i.fa.fa-caret-right");
@@ -108,50 +107,3 @@ function windowHeight(elem){
 // 	});
 // };	
 
-	// smoof-scroll
-	var navigation_links = jQuery("menu a");
-	navigation_links.click( function(event) {
-		event.preventDefault();
-		jQuery.scrollTo(
-			jQuery(this).attr("href"),
-			{
-				duration: 600,
-				offset: { 'left':0, 'top':-0.05*jQuery(window).height() }
-			}
-		);
-	});		
-	jQuery('section').waypoint({
-		handler: function(event, direction) {
-			var active_section = jQuery(this);			
-			if (direction === "up") active_section = active_section.prev();
-			var active_link = jQuery('menu a[href="#' + active_section.attr("id") + '"]');
-			navigation_links.removeClass("active_nav");
-			active_link.addClass("active_nav");
-		},
-		offset: '5%'
-	});
-
-function tile(){
-	var main = $('#container');
-	var item = $('.tile');
-	var itemLength = item.length;
-
-	var firstCol = $('#container .tile:nth-child(3n+1)');
-	var secondCol = $('#container .tile:nth-child(3n+2)');
-	var firdCol = $('#container .tile:nth-child(3n+3)');
-
-	var firstColSmall = $('#container .tile:nth-child(2n+3)');
-	var secondColSmall = $('#container .tile:nth-child(2n+2)');
-if($(window).width() > 767){
-	firstCol.wrapAll('<div class="firstCol"></div>');
-	secondCol.wrapAll('<div class="secondCol"></div>');
-	firdCol.wrapAll('<div class="firdCol"></div>');
-}else{
-	firstColSmall.wrapAll('<div class="firstColSmall"></div>');
-	secondColSmall.wrapAll('<div class="secondColSmall"></div>');
-}
-
-	var fl = firstCol.length;
-	var sl = secondCol.length;
-	var fil = firdCol.length;
-}
