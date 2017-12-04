@@ -21,7 +21,7 @@ $(".portfolio .tab").on('click', function(){
 	$('.tabs-content-wrap .tabs-content').removeClass('active');
 	$('.tabs-content-wrap .tabs-content').eq($(this).index()).addClass('active');
 });
-// $('ul.tabs-technology li').addClass('animated bounceInUp');
+$('ol.tabs-technology li').addClass('animated bounceInUp');
 
 // portfolio block-left
 $(".block-left .block-in-block button.icon").on('click',function(){
@@ -50,10 +50,15 @@ $('.svg-progress-demo1').svgprogress({
 				}
 			},
 				onAnimationComplate: function(){
-			console.log('Progress complate!');
+					$('.svg-progress-demo1').addClass('load-complate');
 		}
 });
-$('.svg-progress-demo1').trigger("redraw");
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1000 && !$('.svg-progress-demo1').hasClass('load-complate') ) {
+    	$('.svg-progress-demo1').trigger("redraw");
+    }
+});
 
 console.log(dotNav);
 // hParallax();
