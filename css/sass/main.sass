@@ -1,4 +1,5 @@
 @import "bourbon/bourbon"
+@import "_vars.sass"
 
 body
 	font-family: "Raleway", sans-serif
@@ -9,12 +10,61 @@ body
 	line-height: 1.42857
 	-webkit-font-smoothing: antialised
 
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
+input:focus:required:invalid,
+textarea:focus:required:invalid
 	color: red
-body input:required:valid,
-body textarea:required:valid
+input:required:valid,
+textarea:required:valid
 	color: green
 
 .hidden
 	display: none
+
+
+.main-title
+	font-size: 120px
+	color: $textC
+	opacity: 0.5
+	text-align: center
+	letter-spacing: 15px
+	text-transform: uppercase
+	&:first-letter
+		color: $mainC
+
+section
+	height: auto
+	width: 100%
+	position: relative
+
+header
+	color: $textC
+	.right-nav
+		height: 100%
+		width: 50px
+		position: fixed
+		right: 0
+		z-index: 999
+
+//Burger button animation start ----
+.mnu
+	height: 20px
+	width: 45px
+	cursor: pointer
+	position: relative
+	margin-top: 10px
+	z-index: 10
+	span
+		transition: all 0.3s
+	&:hover span
+		width: 25px
+	&.active span 
+		top: 5px
+		width: 30px
+		background-color: $white
+		&:nth-child(1)
+			display: none
+		&:nth-child(2)
+			transform: rotate(-45deg)
+		&:nth-child(3)
+			transform: rotate(45deg)
+//Burger button animation enad -----

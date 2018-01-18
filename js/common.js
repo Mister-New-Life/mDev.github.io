@@ -1,5 +1,116 @@
 $(document).ready(function() {
 
+	particlesJS('particles-js',{
+  "particles": {
+    "number": {
+      "value": 30,
+      "density": {
+        "enable": true,
+        "value_area": 400
+      }
+    },
+    "color": {
+      "value": "#f585b5"
+    },
+    "shape": {
+      "type": "polygon",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.6234266368894954,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 7,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 46.288401101176675,
+        "size_min": 11.369080972218832,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 192.40944730386272,
+      "color": "#ea0b6a",
+      "opacity": 0.26456299004281125,
+      "width": 2
+    },
+    "move": {
+      "enable": true,
+      "speed": 2,
+      "direction": "top",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": true,
+        "rotateX": 700,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+
 $('button.work').magnificPopup({type:'image'});
 
 $('body').css('backgroundSize', '100%' + $(window).height()+'px');
