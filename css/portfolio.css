@@ -1,0 +1,121 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+.mnu {
+	height: 20px;
+	width: 45px;
+	cursor: pointer;
+	position: fixed;
+	margin-top: 10px;
+	z-index: 999;
+	right: 0;
+}
+.mnu.active span {
+	background-color: #fff;
+}
+.mnu.active span:nth-child(1) {
+	display: none;
+}
+.mnu.active span:nth-child(2) {
+	transform: rotate(-45deg);
+	top: 5px;
+	width: 30px;	
+}
+.mnu.active span:nth-child(3) {
+	transform: rotate(45deg);
+	top: 5px;
+	width: 30px;
+}
+.mnu:hover span {
+	width: 25px;
+	transition: all 0.3s;
+}
+.mnu span {
+	position: absolute;
+	right: 0;
+	margin-right: 10px;
+	width: 25px;
+	height: 2px;
+	background-color: #EA0B6A;
+	transition: all 0.3s;
+}
+.mnu span:nth-child(1) {
+	top: 0;
+}
+.mnu span:nth-child(2) {
+	top: 7px;
+	width: 15px;
+}
+.mnu span:nth-child(3) {
+	top: 15px;
+	width: 18px
+}
+menu {
+	height: 100%;
+	position: fixed;
+	width: 200px;
+	top: 0;
+	right: -210px;
+	-webkit-transition: right 0.3s;
+	-o-transition: right 0.3s;
+	transition: right 0.3s;
+	background: rgba(245,27,92,1);
+	background: -moz-linear-gradient(-45deg, rgba(245,27,92,1) 0%, rgba(209,1,136,1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(245,27,92,1)), color-stop(100%, rgba(209,1,136,1)));
+	background: -webkit-linear-gradient(-45deg, rgba(245,27,92,1) 0%, rgba(209,1,136,1) 100%);
+	background: -o-linear-gradient(-45deg, rgba(245,27,92,1) 0%, rgba(209,1,136,1) 100%);
+	background: -ms-linear-gradient(-45deg, rgba(245,27,92,1) 0%, rgba(209,1,136,1) 100%);
+	background: linear-gradient(135deg, rgba(245,27,92,1) 0%, rgba(209,1,136,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f51b5c', endColorstr='#d10188', GradientType=1 );
+	box-shadow: -2px -1px 6px #999;
+	z-index: 99;
+}
+menu.active {
+	right: 0;
+}
+menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin: -138px -100px;
+}
+menu ul li:last-child a {
+	border-bottom: 1px solid #fff;
+}
+menu ul li a {
+	color: #fff;
+	text-transform: uppercase;
+	display: block;
+	padding: 10px 20px;
+	font-size: 14px;
+	text-align: center;
+	border-top: 1px solid #fff;
+	width: 80%;
+	margin: 5px auto;
+	letter-spacing: 2px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+menu ul li a:hover{
+	letter-spacing: 6px;
+} 
+.main-title {
+	font-size: 50px;
+	padding-top: 30px;
+	color: #333;
+	opacity: 0.5;
+	font-weight: normal;
+	text-align: center;
+	letter-spacing: 15px;
+	text-transform: uppercase;
+}
+.main-title:first-letter {
+	color: #fff;
+    padding: 0px 10px;
+    letter-spacing: 0;
+    background-color: rgba(234,11,106, 0.7)
+}

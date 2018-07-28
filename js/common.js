@@ -111,8 +111,6 @@ $(document).ready(function() {
   "retina_detect": true
 });
 
-$('button.work').magnificPopup({type:'image'});
-
 $('body').css('backgroundSize', '100%' + $(window).height()+'px');
 $('.mnu').on('click',function(){
 	 $(this).toggleClass('active')
@@ -127,6 +125,7 @@ function setToggleActive(elm,that){
 $("nav ul li").on('click',function(){
 	setToggleActive("nav ul li",$(this));
 });
+
 $(".portfolio .tab").on('click', function(){
 	setToggleActive(".portfolio .tab",$(this));
 	$('.tabs-content-wrap .tabs-content').removeClass('active');
@@ -148,6 +147,7 @@ $(".block-left .block-in-block button.icon").on('click',function(){
    	var id  = $(this).attr('href'),
     		top = $(id).offset().top;
   $('body,html').animate({scrollTop: top}, 700);
+  return false;
 });
 
 $('.svg-progress-demo1').svgprogress({

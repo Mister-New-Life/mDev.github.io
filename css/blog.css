@@ -1,0 +1,9 @@
+.main {
+	height: 500px;
+	width: 300px;
+	overflow: scroll;
+}
+.main img {
+	width: 100%;
+	height: 700px;
+}
